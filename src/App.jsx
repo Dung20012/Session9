@@ -7,6 +7,8 @@ import PrivateRouter from './pages/PrivateRouter';
 import Account from './pages/Account';
 import Product from './pages/Product';
 import Order from './pages/Order';
+import ListProduct from './routers/ListProduct';
+import ProductDetail from './routers/ProductDetail';
 
 
 function App() {
@@ -27,6 +29,9 @@ function App() {
             <Route path="product" element={<Product />} />
             <Route path="order" element={<Order />} />
           </Route>
+
+          <Route path="/list-product" element={<ListProduct />} />
+          <Route path="/product-detail/:id" element={<ProductDetail />} />
         </Routes>
       </BrowserRouter>
     </>
