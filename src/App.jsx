@@ -9,6 +9,9 @@ import Product from './pages/Product';
 import Order from './pages/Order';
 import ListProduct from './routers/ListProduct';
 import ProductDetail from './routers/ProductDetail';
+import Login from './local/Login';
+import PrivateRouters from './local/PrivateRouters';
+import Accounts from './local/Accounts';
 
 
 function App() {
@@ -32,6 +35,16 @@ function App() {
 
           <Route path="/list-product" element={<ListProduct />} />
           <Route path="/product-detail/:id" element={<ProductDetail />} />
+
+          <Route path="/login" element={<Login />} />
+        <Route
+          path="/accounts"
+          element={
+            <PrivateRouters>
+              <Accounts/>
+            </PrivateRouters>
+          }
+        />
         </Routes>
       </BrowserRouter>
     </>
